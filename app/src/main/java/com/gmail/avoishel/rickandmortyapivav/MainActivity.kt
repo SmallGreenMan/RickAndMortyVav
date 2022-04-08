@@ -7,11 +7,10 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import com.gmail.avoishel.rickandmortyapivav.DataClasses.GetCharacterByIdResponse
-import com.squareup.moshi.Moshi
-import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
 import com.squareup.picasso.Picasso
 import retrofit2.*
-import retrofit2.converter.moshi.MoshiConverterFactory
+import com.gmail.avoishel.rickandmortyapivav.NetworkLayer
+
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -25,14 +24,8 @@ class MainActivity : AppCompatActivity() {
         val originTextView = findViewById<TextView>(R.id.originTextView)
         val speciesTextView = findViewById<TextView>(R.id.speciesTextView)
 
-        val moshi = Moshi.Builder().add(KotlinJsonAdapterFactory()).build()
 
-        val retrofit = Retrofit.Builder()
-            .baseUrl("https://rickandmortyapi.com/api/")
-            .addConverterFactory(MoshiConverterFactory.create(moshi))
-            .build()
-
-        val rickAppCompatActivity: RickAndMortyService = retrofit.create(RickAndMortyService::class.java)
+        NetworkLayer.apiClient.getCharacterById(54)
 
         rickAppCompatActivity.getCharacterById(3).enqueue(object : Callback<GetCharacterByIdResponse> {
             override fun onResponse(call: Call<GetCharacterByIdResponse>, response: Response<GetCharacterByIdResponse>) {
