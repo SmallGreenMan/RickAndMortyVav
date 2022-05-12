@@ -1,4 +1,4 @@
-package com.gmail.avoishel.rickandmortyapivav
+package com.gmail.avoishel.rickandmortyapivav.network
 
 import retrofit2.Response
 import java.lang.Exception

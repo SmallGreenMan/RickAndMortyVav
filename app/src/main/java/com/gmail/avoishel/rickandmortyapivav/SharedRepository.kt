@@ -1,6 +1,7 @@
 package com.gmail.avoishel.rickandmortyapivav
 
-import com.gmail.avoishel.rickandmortyapivav.DataClasses.GetCharacterByIdResponse
+import com.gmail.avoishel.rickandmortyapivav.network.response.GetCharacterByIdResponse
+import com.gmail.avoishel.rickandmortyapivav.network.NetworkLayer
 
 class SharedRepository {
 

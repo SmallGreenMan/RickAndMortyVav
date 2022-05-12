@@ -1,4 +1,4 @@
-package com.gmail.avoishel.rickandmortyapivav.DataClasses
+package com.gmail.avoishel.rickandmortyapivav.network.response
 
 data class GetCharacterByIdResponse(
     val created: String = "",

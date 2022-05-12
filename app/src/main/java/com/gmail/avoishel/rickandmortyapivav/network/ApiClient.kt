@@ -1,6 +1,6 @@
-package com.gmail.avoishel.rickandmortyapivav
+package com.gmail.avoishel.rickandmortyapivav.network
 
-import com.gmail.avoishel.rickandmortyapivav.DataClasses.GetCharacterByIdResponse
+import com.gmail.avoishel.rickandmortyapivav.network.response.GetCharacterByIdResponse
 import retrofit2.Response
 
 class ApiClient(

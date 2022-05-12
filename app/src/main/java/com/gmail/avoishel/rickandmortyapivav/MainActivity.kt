@@ -2,15 +2,11 @@ package com.gmail.avoishel.rickandmortyapivav
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
-import com.gmail.avoishel.rickandmortyapivav.DataClasses.GetCharacterByIdResponse
 import com.squareup.picasso.Picasso
-import retrofit2.*
-import com.gmail.avoishel.rickandmortyapivav.NetworkLayer
 
 
 class MainActivity : AppCompatActivity() {

@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.*
-import com.gmail.avoishel.rickandmortyapivav.DataClasses.GetCharacterByIdResponse
+import com.gmail.avoishel.rickandmortyapivav.network.response.GetCharacterByIdResponse
 
 class SharedViewModel: ViewModel() {
 
